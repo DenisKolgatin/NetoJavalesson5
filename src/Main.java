@@ -1,16 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        Book book = new Book();
-        book.title = "Java 8";
-        book.author = "James Bond";
-        book.pages = 510;
-        book.releaseYear = 1990;
+        Book book = new Book("Java 8", 1990, "James Bond", 510);
 
-        System.out.println(book.isBig());
-        System.out.println(book.estimatePrice());
-        System.out.println(book.matches("Bond"));
-
-        Book book2 = new Book();
-        System.out.println(book2);
+        System.out.println("Книга большая? " + book.isBig());
+        System.out.println("Цена книги " + book.estimatePrice() + " рублей.");
+        System.out.println("В книге упоминается писатель Bond? " + book.matches("Bond"));
+        System.out.println(book);
     }
 }
